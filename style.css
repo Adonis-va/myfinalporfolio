@@ -44,15 +44,20 @@ nav {
   text-decoration: none;
   color: #fff;
  }
+ nav ul li a:hover {
+  color: #ffd446;
+ }
+
  .details {
   text-align: center;
   margin: 5% 25%;
  }
  footer {
   text-align: center;
-  background-color: #ccc;
+  background-color: #313131;
   padding: 80px;
   margin-top: 200px;
+  color: #fff;
  }
  .card {
   width: 300px;
@@ -79,6 +84,9 @@ nav {
   display: flex;
   flex-direction: column;
 }
+.card:hover {
+  box-shadow: 0 0 1px #ccc;
+}
 img {
   width: 350px;
   border-radius: 10px;
@@ -95,4 +103,23 @@ h4 {
 }
 .myProjectParagraph {
   margin: 0 25%;
+}
+.lastSection {
+  display: flex;
+  gap: 30px;
+  place-content: center;
+  font-weight: 600;
+}
+.proDocParagraph {
+  margin: 0 25%;
+}
+.cardsContainer .card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.cardsContainer .card.loaded {
+  opacity: 1;
+  transform: translateY(0);
 }
